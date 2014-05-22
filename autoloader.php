@@ -14,7 +14,7 @@ class Autoloader {
                 while (false !== ($entry = readdir($handle))) {
                     if($entry != "." && $entry != "..") {
 						//File including
-                        require (APP."/".$folder."/".$entry);
+                        require (APP.$folder."/".$entry);
                     }
                 }
             }

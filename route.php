@@ -21,14 +21,15 @@ class Route{
 	public static function init(){
 		if(isset($_SERVER['PATH_INFO'])) {
 			self::$uri = ltrim($_SERVER['PATH_INFO'], '/');
+		} else {
+			self::$uri = "/";
 		}
 	}
 	
 	//Launch de controller
-	public static function launch($route, $name, $controller, $method){
+	public static function launch($route, $name, $controller, $method){		
 		//Route bestaat en matched
 		if(self::$uri != null && self::$uri === $route){
-
 			
 			Controller::launch("/".$controller."/".$method);
 		}

@@ -20,6 +20,6 @@ include(APP."routes.php");
 
 if(isset($_SERVER['PATH_INFO'])) {
 	Controller::launch($_SERVER['PATH_INFO']);
-} else {
+} /*else {
 	Controller::launch("home/index");
-}
+}*/

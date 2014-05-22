@@ -18,4 +18,5 @@ DO:		User@index
 
 */	
 
-Route::get('login', 'login', 'User', 'index');
+Route::get('/', 'login', 'Auth', 'index');
+Route::get('login', 'login', 'Auth', 'index');
