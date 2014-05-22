@@ -9,14 +9,23 @@ class Config {
 	public function Config(){}
 	
     public static function load() {
+		//Database
         require("db.php");
-		require("paths.php");
-		require("route.php");
+		//Database config
+		self::$db = array(
+			'driver'	=> 'mysqli',
+			'host'		=> 'localhost',
+			'db'		=> 'mvc',
+			'user'		=> 'root',
+			'pass'		=> ''
+		);
+		DB::instance();
 		
-		//Map voor Classes, Controllers, Libs, Models, Views
-		define("APP", "app/");
-		//Map voor Css, Js, Sass, Img
-		define("PUBLIC", "public/");
+		//Paths
+		require("paths.php");
+		
+		//Route voor routes
+		require("route.php");	
     }
 }
 
