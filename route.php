@@ -10,15 +10,27 @@ class Route{
 	
 	public function Route(){}
 	
+	//Check of method matched met request method
+	public static function method($method, $request){
+		if($method != $request){
+			return;
+		}
+	}
+	
+	//Voeg uri toe aan route
 	public static function init(){
 		if(isset($_SERVER['PATH_INFO'])) {
 			self::$uri = ltrim($_SERVER['PATH_INFO'], '/');
 		}
 	}
 	
-	public static function method($method, $request){
-		if($method != $request){
-			return;
+	//Launch de controller
+	public static function launch($route, $name, $controller, $method){
+		//Route bestaat en matched
+		if(self::$uri != null && self::$uri === $route){
+
+			
+			Controller::launch("/".$controller."/".$method);
 		}
 	}
 	
@@ -27,14 +39,8 @@ class Route{
 		self::method("GET", $_SERVER['REQUEST_METHOD']);
 		//Path
 		self::init();
-		
-		//Route bestaat en matched
-		if(self::$uri != null && self::$uri === $route){
-			echo $route."<br>";
-			echo $name."<br>";
-			echo $controller."<br>";
-			echo $method."<br>";
-		}
+		//Launch
+		self::launch($route, $name, $controller, $method);
 	}
 	
 	public static function post($route, $name, $controller, $method){
@@ -42,14 +48,8 @@ class Route{
 		self::method("POST", $_SERVER['REQUEST_METHOD']);
 		//Path
 		self::init();
-		
-		//Route bestaat en matched
-		if(self::$uri != null && self::$uri === $route){
-			echo $route."<br>";
-			echo $name."<br>";
-			echo $controller."<br>";
-			echo $method."<br>";
-		}
+		//Launch
+		self::launch($route, $name, $controller, $method);
 	}
 	
 	public static function put($route, $name, $controller, $method){
@@ -57,14 +57,8 @@ class Route{
 		self::method("PUT", $_SERVER['REQUEST_METHOD']);
 		//Path
 		self::init();
-		
-		//Route bestaat en matched
-		if(self::$uri != null && self::$uri === $route){
-			echo $route."<br>";
-			echo $name."<br>";
-			echo $controller."<br>";
-			echo $method."<br>";
-		}
+		//Launch
+		self::launch($route, $name, $controller, $method);
 	}
 	
 	public static function delete($route, $name, $controller, $method){
@@ -72,14 +66,8 @@ class Route{
 		self::method("DELETE", $_SERVER['REQUEST_METHOD']);
 		//Path
 		self::init();
-		
-		//Route bestaat en matched
-		if(self::$uri != null && self::$uri === $route){
-			echo $route."<br>";
-			echo $name."<br>";
-			echo $controller."<br>";
-			echo $method."<br>";
-		}
+		//Launch
+		self::launch($route, $name, $controller, $method);
 	}
 	
 	

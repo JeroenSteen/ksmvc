@@ -12,11 +12,10 @@ include("controller.php");
 include("autoloader.php");
 //Autolader registreren
 spl_autoload_register(array("Autoloader", "load"));
-//Alle files inladen, met Autoloader
+//Inladen files met Autoloader
 Autoloader::load();
 
 //Route
-//$route = new Route;
 include(APP."routes.php");
 
 if(isset($_SERVER['PATH_INFO'])) {
