@@ -1,5 +1,5 @@
 <header>
-    <div id="menu_bar">
+    <div id="menu_bar" class="mb-40">
 
         <div class="container">
             <div class="col16 col">

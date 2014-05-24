@@ -1,0 +1,64 @@
+@import compass
+@import var/_color
+@import var/_font
+
+$default-text-shadow-color: rgba(#333, .40)
+$default-text-shadow-blur: 1px
+$default-text-shadow-v-offset: 1px
+
+.btn
+	text-decoration: none
+	display: inline-block
+	padding: 8px 10px
+	margin-bottom: 20px
+	font: 14px $font-prime
+	font-weight: bold
+	font-size: 13px
+	line-height: 20px
+	color: $black
+	text-align: center
+	vertical-align: middle
+	cursor: pointer
+	border: 1px solid #aaa
+	border-top: 1px solid #ccc
+	border-left: 1px solid #ccc
+	background-color: white
+	+single-text-shadow
+	+border-radius(6px)
+	+background-image(linear-gradient(rgba(255, 255, 255, 0.3), rgba(230, 230, 230, 0.6)))
+
+.btn:hover
+	+background-image(linear-gradient(rgba(230, 230, 230, 0.6), rgba(255, 255, 255, 0.3)))
+	
+button::-moz-focus-inner,input::-moz-focus-inner
+	border: 0
+	padding: 0
+
+.btn-primary
+	background-color: gold
+.btn-info
+	background-color: lightblue
+.btn-success
+	background-color: $green
+.btn-warning
+	background-color: orange
+.btn-danger
+	background-color: red
+.btn-inverse
+	background-color: darkgrey
+.btn-success,.btn-warning,.btn-danger,.btn-inverse
+	color: white
+	
+.btn-i
+	width: 20px
+	height: 20px
+
+.btn-xs
+	font-size: 12px
+.btn-sm
+	font-size: 14px
+.btn-lg
+	font-size: 18px
+.btn-xl
+	font-size: 22px
+	

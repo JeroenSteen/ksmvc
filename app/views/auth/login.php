@@ -34,7 +34,7 @@
 
     <div class="col8 col omega">
 
-        <form action="" method="" autocomplete="off">
+        <form action="auth/login" method="post" autocomplete="off">
 
             <div class="col4 col alpha">
                 <label for="first_name">Voornaam</label>

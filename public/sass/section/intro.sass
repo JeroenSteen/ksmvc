@@ -1,0 +1,38 @@
+@import compass
+@import var/_color
+@import var/_font
+
+.intro
+	@media (min-width: 959px)
+		font: 35px $font-prime
+		color: $green
+	@media (min-width: 768px) and (max-width: 959px)
+		font: 32px $font-prime
+		color: $green
+	@media (max-width: 767px)
+		font: 30px $font-prime
+		color: gold
+	@media (min-width: 480px) and (max-width: 767px)
+		font: 28px $font-prime
+		color: gold
+	@media (max-width: 479px)
+		font: 24px $font-prime
+		color: $green
+	text-shadow: 0px 1px 1px $grey
+	padding-left: $room
+	padding-right: $room
+	max-width: 730px
+	
+h1.intro
+	font-weight: bold
+#intro_feature p, #intro_feature h2
+	padding-left: $room
+#intro_feature h2
+	color: $black
+	font-size: 25px
+	margin-bottom: 0
+#intro_feature
+	font-family: $font-prime
+	color: $darkgrey
+#intro_feature a
+	color: white

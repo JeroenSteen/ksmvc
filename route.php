@@ -24,6 +24,7 @@ class Route{
 		} else {
 			self::$uri = "/";
 		}
+
 	}
 	
 	//Launch de controller
@@ -70,6 +71,8 @@ class Route{
 		//Launch
 		self::launch($route, $name, $controller, $method);
 	}
+
+
 	
 	
 }

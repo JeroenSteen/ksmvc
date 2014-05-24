@@ -1,0 +1,36 @@
+@import compass
+@import var/_color
+@import var/_font
+
+.fdb
+	display: block
+	padding: 10px 12px
+	margin-bottom: 20px
+	font: 14px $font-descr
+	font-weight: bold
+	font-size: 13px
+	color: $black
+	border: 1px solid #aaa
+	border-top: 1px solid #ccc
+	border-left: 1px solid #ccc
+	background-color: white
+	+single-text-shadow
+	+border-radius(6px)
+	+background-image(linear-gradient(rgba(255, 255, 255, 0.3), rgba(230, 230, 230, 0.6)))
+.fdb img
+	position: absolute
+	margin: 0 3px 0 3px
+.fdb-primary
+	background-color: gold
+.fdb-info
+	background-color: lightblue
+.fdb-success
+	background-color: $green
+.fdb-warning
+	background-color: orange
+.fdb-danger
+	background-color: red
+.fdb-inverse
+	background-color: darkgrey
+.fdb-success,.fdb-warning,.fdb-danger,.fdb-inverse
+	color: white
