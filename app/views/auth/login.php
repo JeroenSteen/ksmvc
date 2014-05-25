@@ -98,6 +98,10 @@
     </div>
 </div>
 
+<?php
+User::find(2);
+?>
+
 <?php include("app/views/partials/footer.php"); ?>
 
 

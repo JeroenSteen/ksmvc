@@ -2,9 +2,9 @@
 	
 class DB {
 
-	private static $db = null;
+	public static $db = null;
 	
-	public function DB(){
+	private function DB(){
 		
 		if(isset(Config::$db)){
 			//Database connectie gegevens
@@ -32,7 +32,7 @@ class DB {
 	//Singleton
 	public static function & instance() {
         if(!self::$db) {
-            self::$db = new DB;
+            self::$db = new DB();
         }
         return self::$db;
     }
