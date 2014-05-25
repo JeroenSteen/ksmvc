@@ -3,6 +3,9 @@
 include("config.php");
 Config::load();
 
+//Libs; Action Record
+require_once (APP."libs/php-activerecord/ActiveRecord.php");
+
 //Model, View, Controller
 include("model.php");
 include("view.php");
@@ -23,3 +26,5 @@ if(isset($_SERVER['PATH_INFO'])) {
 } /*else {
 	Controller::launch("home/index");
 }*/
+	
+

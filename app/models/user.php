@@ -1,8 +1,13 @@
 <?php
 
+//class User extends ActiveRecord\Model{
 class User extends Model{
 
-    public static $rules = array(
+    public static $table_name = "user";
+    //public static $primary_key = "";
+
+
+    /*public static $rules = array(
         "first_name" => 1,
         "last_name" => 2,
         "day" => 3,
@@ -12,9 +17,10 @@ class User extends Model{
         "password" => 3,
         "password_confirm" => 3,
     );
+*/
 
-    public function User(){
-    }
+    //public function User(){
+    //}
 
 
 

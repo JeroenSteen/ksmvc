@@ -1,19 +1,19 @@
 <?php
 
-class Model
-{
+class Model extends ActiveRecord\Model {
 
-    public function Model(){}
+    public function Model(){
+	}
 
     public static function find($id, $columns = "*") {
-        $DB = DB::instance();
+        //$DB = DB::instance();
         //var_dump($DB);
 
-        $query = "SELECT * WHERE id='$id'";
+        //$query = "SELECT * WHERE id='$id'";
 
-        if($result = $DB->$query($query)){
-            echo $result;
-        }
+        //if($result = $DB->$query($query)){
+        //    echo $result;
+        //}
 
     }
 

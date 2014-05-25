@@ -2,7 +2,7 @@
 
 class Autoloader {
 	
-	public static $folders = array('classes', 'controllers', 'libs', 'models');
+	public static $folders = array('classes', 'controllers', 'models');
 		
 	//Inladen classes
 	public static function load() {
