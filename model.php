@@ -1,11 +1,11 @@
 <?php
 
-class Model extends ActiveRecord\Model {
+class Model  {
 
     public function Model(){
 	}
 
-    public static function find($id, $columns = "*") {
+    //public static function find($id, $columns = "*") {
         //$DB = DB::instance();
         //var_dump($DB);
 
@@ -15,7 +15,7 @@ class Model extends ActiveRecord\Model {
         //    echo $result;
         //}
 
-    }
+    //}
 
     //ORM - Model -> Config::$db["driver"] -> Classes/Wrapper/"Driver"
 

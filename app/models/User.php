@@ -1,11 +1,15 @@
 <?php
 
-//class User extends ActiveRecord\Model{
-class User extends Model{
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
-    public static $table_name = "user";
-    //public static $primary_key = "";
+class User extends Eloquent {
 
+    protected $table = 'user';
+    protected $fillable = ['title'];
+
+    public function User(){
+
+    }
 
     /*public static $rules = array(
         "first_name" => 1,

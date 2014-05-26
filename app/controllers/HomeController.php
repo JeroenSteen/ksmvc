@@ -6,10 +6,11 @@ class HomeController extends Controller{
 	}
 	
 	public function index($id){
-        var_dump(User::find_by_name("jeroen"));
+		/*$user = User::find_by_name("jeroen");
+        var_dump($user);
 
-		$user = User::find_by_name("jeroen");
-        echo $user->name;
+        echo $user->name;*/
+        dd(User::find(1)->toArray());
 
 		echo View::make("home/index");
 	}
